@@ -23,7 +23,7 @@ INSERT INTO demo.student VALUES (NULL, '李四',18);
 INSERT INTO demo.student VALUES (NULL, '王五',20);
 DESC demo.student;
 
-DROP TABLE IF EXISTS demo.stu_courses
+DROP TABLE IF EXISTS demo.stu_courses;
 CREATE TABLE demo.stu_courses(
   id INT AUTO_INCREMENT PRIMARY KEY ,
   sid int(1),
@@ -38,7 +38,7 @@ REFERENCES demo.courses (id);
 ALTER TABLE demo.stu_courses
   ADD CONSTRAINT student_sid
 FOREIGN KEY (sid)
-REFERENCES demo.student (id)
+REFERENCES demo.student (id);
 
 SHOW CREATE DATABASE demo
 
